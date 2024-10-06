@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Factorial</title>
+</head>
+<body>
+    <label for="fac">Enter the number to find factorial</label>
+    <input type="number" id="fac">
+    <input type="button" onclick="factNum(this.value)" value="Submit">
+    <p id="result"></p>
+<script>
+    function factNum(num){
+    let fValue = parseInt(document.getElementById('fac').value)
+    let factIs = findFact(fValue)
+    document.getElementById('result').innerHTML = 'Factorial of the number is '+ factIs
+    
+    function findFact(fValue){
+        let ft = 1
+        for(let i=1;i<=fValue;i++){
+            ft = ft*i
+            console.log(ft)
+        }   
+        return ft
+    }
+}
+</script>
+</body>
+
+</html>
